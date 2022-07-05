@@ -1,4 +1,5 @@
 import java.awt.BorderLayout;
+import java.awt.Button;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -19,13 +20,19 @@ public class Crono extends JFrame{
 		setLayout(new BorderLayout());
 		
 		TextPanel textPanel = new TextPanel();
-		add(BorderLayout.CENTER, textPanel);
+		add(BorderLayout.NORTH, textPanel);
 		
 		
 		JPanel digitsPanel = new JPanel();
 		digitsPanel.setLayout(new BorderLayout());
 		
-		add(BorderLayout.SOUTH, digitsPanel);
+		add( digitsPanel);
+		digitsPanel.add(BorderLayout.SOUTH,new Button01(textPanel.getTxtNumber()));
+		
+		
+		
+		
+		setVisible(true);
 		
 	}
 	
